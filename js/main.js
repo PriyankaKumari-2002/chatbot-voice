@@ -2,11 +2,10 @@ let mic = document.getElementById("mic");
 let chatareamain = document.querySelector('.chatarea-main');
 let chatareaouter = document.querySelector('.chatarea-outer');
 
-let intro = ["Hello, I am Eva", "Hi, I am a Robo", "Hello, My name is Eva"];
+let intro = ["Hello, I am AmerEco", "Hi, I am a AmerEco", "Hello, My name is AmerEco"];
 let help = ["How may i assist you?","How can i help you?","What i can do for you?"];
-let greetings = ["i am good you little piece of love", "i am fine, what about you",  "i am good"];
-let hobbies = ["i would love to assist you ", "i like to make friends like you", "i like cooking"];
-let food = ["which type of food do you like?", "i cook delicious,mouth watering food for you ", "i would love to cook for you", "would you like cheese pizza?"];
+let greetings = ["Our Website EcoPay rewards you through points and eco-friendly products depending on level of contribution towards environments. payment gateway for transcations", "You will get rewarded in through points which gives you eco friendly products like cloth bag, kitchen composer etc."];
+let hobbies = ["easy to pay and receive benefits from our scheme and within the city welfare schemes.Easy to monitor the expenses"];
 let thank = ["Most welcome","Not an issue","Its my pleasure","Mention not"];
 let closing = ['Ok bye-bye','As you wish, bye take-care','Bye-bye, see you soon..']
 
@@ -38,23 +37,20 @@ function chatbotvoice(message){
         let finalresult = help[Math.floor(Math.random() * help.length)];
         speech.text = finalresult;
     }
-    if(message.includes('are you fine' || 'how are you doing today')){
+    if(message.includes('What all features EcoPay has' || 'What all unique features, your website have')){
         let finalresult = greetings[Math.floor(Math.random() * greetings.length)];
         speech.text = finalresult;
     }
-    if(message.includes('tell me something about you' || 'tell me something about your hobbies')){
+    if(message.includes('tell me something special about your website' || 'tell me something unique/advantages about your website')){
         let finalresult = hobbies[Math.floor(Math.random() * hobbies.length)];
         speech.text = finalresult;
     }
-    if(message.includes('cook for me')){
-        let finalresult = food[Math.floor(Math.random() * food.length)];
-        speech.text = finalresult;
-    }
+    
     if(message.includes('thanks a lot' || 'thank you so much')){
         let finalresult = thank[Math.floor(Math.random() * thank.length)];
         speech.text = finalresult;
     }
-    if(message.includes('talk to you' || 'talk')){
+    if(message.includes('talk to you again while using website' || 'talk again')){
         let finalresult = closing[Math.floor(Math.random() * closing.length)];
         speech.text = finalresult;
     }
@@ -77,3 +73,4 @@ mic.addEventListener("click", function(){
     recognition.start();
     console.log("Activated");
 })
+
